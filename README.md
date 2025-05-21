@@ -195,6 +195,22 @@ The ML pipeline (based on Facebook Prophet) was developed and validated in `03_m
 
 ---
 
+## Technologies Used
+
+- **Python 3.10** – Core language for modeling, analysis, and dashboard development
+- **Pandas / NumPy** – Data cleaning, transformation, and feature engineering
+- **Matplotlib / Seaborn / Plotly** – Static and interactive visualizations
+- **Facebook Prophet** – Forecasting library used for time-series prediction
+- **Scikit-learn** – Evaluation tools and optional modeling support
+- **Streamlit** – Framework for building the interactive dashboard
+
+## Acknowledgments
+
+- Dataset: [Store Sales - Time Series Forecasting](https://www.kaggle.com/competitions/store-sales-time-series-forecasting)
+- Educational Provider: Code Institute – for curriculum support and guidance
+- Forecasting Engine: Facebook Prophet – developed by Meta and used under its open-source license
+- This project was developed as part of the Code Institute Diploma in Full Stack Software Development
+
 ## Dashboard Preview
 
 Below is a preview of the Streamlit dashboard:
