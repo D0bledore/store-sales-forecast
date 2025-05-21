@@ -135,10 +135,12 @@ streamlit run app.py
 
 In `app.py`, the following datasets are loaded via `pd.read_csv()` from raw GitHub URLs:
 
-- `forecast_results.csv`
-- `train.csv`
-- `stores.csv`
-- `inventory_prepared.csv`
+- `forecast_results_sample.csv`
+- `train_sample.csv`
+- `stores.csv` (used instead of a sample version)
+- `inventory_prepared_sample.csv`
+
+These smaller sample files were created to support lightweight and fast loading in a cloud environment like Render, where large datasets are impractical for deployment.
 
 > For example:
 > ```python
