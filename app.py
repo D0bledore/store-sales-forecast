@@ -11,10 +11,11 @@ st.set_page_config(page_title="Sales Forecast Dashboard", layout="wide")
 st.title("Sales Forecast Dashboard - Corporación Favorita")
 
 # Load data
-forecast_df = pd.read_csv("forecasts/forecast_results.csv")
-actual_df = pd.read_csv("data/train.csv")
-store_meta = pd.read_csv("data/stores.csv")
-full_train = pd.read_csv("data/processed/inventory_prepared.csv")
+forecast_df = pd.read_csv("https://raw.githubusercontent.com/d0bledore/store-sales-forecast/main/forecasts/forecast_results_sample.csv")
+actual_df = pd.read_csv("https://raw.githubusercontent.com/d0bledore/store-sales-forecast/main/data/train_sample.csv")
+store_meta = pd.read_csv("https://raw.githubusercontent.com/d0bledore/store-sales-forecast/main/data/stores_sample.csv")
+full_train = pd.read_csv("https://raw.githubusercontent.com/d0bledore/store-sales-forecast/main/data/processed/inventory_prepared_sample.csv")
+
 
 # Preprocess
 forecast_df["ds"] = pd.to_datetime(forecast_df["ds"])
