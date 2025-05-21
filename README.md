@@ -229,6 +229,13 @@ The ML pipeline (based on Facebook Prophet) was developed and validated in `03_m
 
 ## Acknowledgments
 
+General research assistance, technical clarification, and formatting suggestions were supported by OpenAI's ChatGPT. This tool was used to refine explanations, structure code snippets, and improve markdown writing throughout the project. Any original code or logic built using guidance has been written and implemented by the project author.
+
+Research and methodological framing was also inspired by foundational works in time series forecasting, particularly:
+
+- Hyndman, R. J., & Athanasopoulos, G. (2018). *Forecasting: Principles and Practice* (2nd ed). OTexts. https://otexts.com/fpp2/
+- Holbrook, R. (2021). *Forecasting with Machine Learning*. Kaggle Learn. https://www.kaggle.com/code/ryanholbrook/forecasting-with-machine-learning. 
+
 - Dataset: [Store Sales - Time Series Forecasting](https://www.kaggle.com/competitions/store-sales-time-series-forecasting)
 - Educational Provider: Code Institute – for curriculum support and guidance
 - Forecasting Engine: Facebook Prophet – developed by Meta and used under its open-source license
