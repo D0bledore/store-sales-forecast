@@ -122,7 +122,19 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Make sure your `data/` and `forecasts/` folders contain the expected CSV files.
+⚠️ Note: For deployment purposes, this app uses remote loading of sample CSVs hosted on GitHub. These small-format files preserve structure while ensuring fast startup on cloud platforms like Render. You can replace the URLs in `app.py` with full datasets for local or production-scale runs.
+
+In `app.py`, the following datasets are loaded via `pd.read_csv()` from raw GitHub URLs:
+
+- `forecast_results.csv`
+- `train.csv`
+- `stores.csv`
+- `inventory_prepared.csv`
+
+> For example:
+> ```python
+> forecast_df = pd.read_csv("https://raw.githubusercontent.com/yourusername/store-sales-forecast/main/forecasts/forecast_results_sample.csv")
+> ```
 
 ---
 
