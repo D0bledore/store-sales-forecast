@@ -70,13 +70,12 @@ It is designed to support decisions around stock replenishment, promotional plan
 
 # Residual Explorer
 
-# Add smoothing and sorting for better visuals
-filtered = filtered.sort_values("ds")
-filtered = filtered.set_index("ds").asfreq("D").reset_index()
-filtered["yhat"] = filtered["yhat"].interpolate()
-filtered["sales"] = filtered["sales"].interpolate()
-
-if len(filtered) < 15:
+# Conditional smoothing and interpolation for small datasets
+if len(filtered) < 30:
+    filtered = filtered.sort_values("ds")
+    filtered = filtered.set_index("ds").asfreq("D").reset_index()
+    filtered["yhat"] = filtered["yhat"].interpolate()
+    filtered["sales"] = filtered["sales"].interpolate()
     st.warning("This sample contains very few data points. The plot may not represent true trends.")
 
 fig1 = px.line(
