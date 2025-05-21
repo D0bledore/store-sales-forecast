@@ -69,13 +69,23 @@ It is designed to support decisions around stock replenishment, promotional plan
 """)
 
 # Residual Explorer
-st.markdown("## Residual Explorer")
+
+# Add smoothing and sorting for better visuals
+filtered = filtered.sort_values("ds")
+filtered = filtered.set_index("ds").asfreq("D").reset_index()
+filtered["yhat"] = filtered["yhat"].interpolate()
+filtered["sales"] = filtered["sales"].interpolate()
+
+if len(filtered) < 15:
+    st.warning("This sample contains very few data points. The plot may not represent true trends.")
+
 fig1 = px.line(
     filtered,
     x="ds",
     y=["yhat", "sales"],
     labels={"value": "Sales", "ds": "Date", "variable": "Legend"},
-    title=f"Forecast vs Actual Sales - Store {store_id}, {family}"
+    title=f"Forecast vs Actual Sales - Store {store_id}, {family}",
+    markers=True
 )
 st.plotly_chart(fig1, use_container_width=True)
 
