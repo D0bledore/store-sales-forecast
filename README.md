@@ -104,6 +104,15 @@ Visualizations provided include:
 
 ---
 
+## Live Deployment
+
+This dashboard is deployed live at:
+**[https://store-sales-forecast.onrender.com/](https://store-sales-forecast.onrender.com/)**
+
+> Note: It may take up to 30 seconds to load due to Render's free-tier cold start.
+
+---
+
 ## Getting Started
 
 1. Clone the repository:
